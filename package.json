@@ -1,0 +1,7 @@
+{
+  "name": "outfit",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  }
+}
