@@ -13,7 +13,6 @@ function closeAll() {
   document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('is-open'));
 }
  
-// ===== NAVBAR BUTTONS =====
 document.getElementById('exploreBtn').addEventListener('click', e => {
   e.stopPropagation();
   const overlay = document.getElementById('exploreOverlay');
@@ -40,7 +39,6 @@ document.getElementById('signupBtn').addEventListener('click', e => {
   openModal('signupOverlay');
 });
  
-// ===== CLOSE BUTTONS =====
 document.querySelectorAll('.modal-close').forEach(btn => {
   btn.addEventListener('click', e => {
     e.stopPropagation();
@@ -49,33 +47,30 @@ document.querySelectorAll('.modal-close').forEach(btn => {
   });
 });
  
-// ===== CLICK OUTSIDE TO CLOSE =====
 document.querySelectorAll('.modal-overlay').forEach(overlay => {
   overlay.addEventListener('click', e => {
     if (e.target === overlay) closeAll();
   });
 });
  
-// ===== ESC KEY =====
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeAll();
 });
  
-// ===== EXPLORE SIDEBAR TABS =====
 document.querySelectorAll('.explore-sidebar-item[data-tab]').forEach(item => {
   item.addEventListener('click', () => {
     const tab = item.dataset.tab;
-    // Update active sidebar
+
     item.closest('.explore-sidebar-list').querySelectorAll('.explore-sidebar-item').forEach(i => i.classList.remove('explore-sidebar-item--active'));
     item.classList.add('explore-sidebar-item--active');
-    // Show correct tab
+
     document.querySelectorAll('#exploreOverlay .explore-tab').forEach(t => t.classList.remove('explore-tab--active'));
     const target = document.getElementById('tab-' + tab);
     if (target) target.classList.add('explore-tab--active');
   });
 });
  
-// ===== SEARCH SIDEBAR TABS =====
+
 document.querySelectorAll('.explore-sidebar-item[data-stab]').forEach(item => {
   item.addEventListener('click', () => {
     const tab = item.dataset.stab;
@@ -87,7 +82,6 @@ document.querySelectorAll('.explore-sidebar-item[data-stab]').forEach(item => {
   });
 });
  
-// ===== SWITCH BETWEEN LOGIN / SIGNUP =====
 document.getElementById('switchToSignup').addEventListener('click', e => {
   e.preventDefault();
   closeModal('loginOverlay');
