@@ -238,7 +238,6 @@ button{
   }
 }
 
-/* BOTTOM LINK */
 
 .academy-link{
   display:flex;
@@ -275,7 +274,6 @@ button{
       transition:.35s cubic-bezier(.19,1,.22,1);
     }
 
-    /* gray line */
     &::after{
       content:"";
       position:absolute;
@@ -323,7 +321,6 @@ button{
   }
 }
 
-/* RESPONSIVE */
 
 @media(max-width:1300px){
 

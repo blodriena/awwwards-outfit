@@ -10,7 +10,6 @@ body {
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: inherit; }
  
-/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   align-items: center;
@@ -896,9 +895,6 @@ body {
   min-height: 100vh;
   padding: 0 80px 120px;
 
-  /* ===================== */
-  /* HEADING */
-  /* ===================== */
 
   &__heading {
     text-align: center;
@@ -922,9 +918,6 @@ body {
     }
   }
 
-  /* ===================== */
-  /* GRID */
-  /* ===================== */
 
   &__grid {
     margin-top: 90px;
@@ -932,10 +925,6 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
   }
-
-  /* ===================== */
-  /* BOTTOM */
-  /* ===================== */
 
   &__bottom {
     margin-top: 55px;
@@ -988,10 +977,6 @@ body {
   }
 }
 
-/* ===================== */
-/* LAUREL */
-/* ===================== */
-
 .laurel {
   position: absolute;
   right: -28px;
@@ -1008,9 +993,6 @@ body {
   }
 }
 
-/* ===================== */
-/* CARD */
-/* ===================== */
 
 .nominee-card {
 
@@ -1085,10 +1067,6 @@ body {
   }
 }
 
-/* ===================== */
-/* OVERLAY */
-/* ===================== */
-
 .overlay {
   position: absolute;
   inset: 0;
@@ -1145,10 +1123,6 @@ body {
   }
 }
 
-/* ===================== */
-/* ANIMATIONS */
-/* ===================== */
-
 @keyframes wind {
 
   0% {
@@ -1199,9 +1173,6 @@ body {
   }
 }
 
-/* ===================== */
-/* RESPONSIVE */
-/* ===================== */
 
 @media (max-width: 1200px) {
 
