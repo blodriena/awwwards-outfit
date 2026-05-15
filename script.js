@@ -152,7 +152,6 @@ const openButtons = {
   signupBtn: "signupOverlay"
 };
 
-// OPEN MODALS
 Object.keys(openButtons).forEach(id => {
   const btn = document.getElementById(id);
   const modalId = openButtons[id];
@@ -164,7 +163,6 @@ Object.keys(openButtons).forEach(id => {
   }
 });
 
-// CLOSE MODALS
 document.querySelectorAll("[data-close]").forEach(btn => {
   btn.addEventListener("click", () => {
     const id = btn.getAttribute("data-close");
@@ -172,7 +170,6 @@ document.querySelectorAll("[data-close]").forEach(btn => {
   });
 });
 
-// CLOSE ON BACKDROP CLICK
 document.querySelectorAll(".modal-overlay").forEach(overlay => {
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {

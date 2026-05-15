@@ -597,7 +597,154 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 700;
   color: #1a1a1a;
 }
+@media (max-width: 992px) {
 
+  /* NAVBAR */
+  .navbar {
+    padding: 0 14px;
+    gap: 10px;
+  }
+
+  .navbar__links {
+    display: none; /* hide full menu */
+  }
+
+  .navbar__center {
+    flex: 1;
+  }
+
+  .navbar__search-btn {
+    max-width: 100%;
+  }
+
+  .navbar__auth-link {
+    display: none;
+  }
+
+  .navbar__be-pro,
+  .navbar__submit {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 0 10px 40px;
+  }
+
+  .hero-title {
+    font-size: 70px;
+    letter-spacing: -3px;
+  }
+
+  .hero-users {
+    gap: 20px;
+  }
+
+  .hero-banner {
+    height: 650px;
+  }
+
+  .hero-content h2 {
+    font-size: 70px;
+  }
+
+  .moving-line {
+    width: 320px;
+  }
+
+  .hover-card {
+    width: 140px;
+    height: 60px;
+  }
+
+  .moving-line:hover .hover-card {
+    left: 170px;
+  }
+
+  .hero-nav h3 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 768px) {
+
+  /* NAVBAR → simplified */
+  .navbar {
+    height: 56px;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    font-size: 18px;
+  }
+
+  .navbar__center {
+    display: none; /* search disappears */
+  }
+
+  .navbar__right {
+    gap: 6px;
+  }
+
+  .navbar__submit {
+    display: none;
+  }
+
+  .navbar__be-pro {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: -2px;
+  }
+
+  .hero-users {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-banner {
+    height: 520px;
+  }
+
+  .hero-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .hero-content h2 {
+    font-size: 40px;
+  }
+
+  .languages {
+    display: none;
+  }
+
+  .moving-line {
+    width: 240px;
+  }
+
+  .hover-card {
+    width: 110px;
+    height: 50px;
+  }
+
+  .moving-line:hover .hover-card {
+    left: 120px;
+  }
+
+  .since {
+    left: 20px;
+    bottom: 30px;
+    font-size: 16px;
+  }
+}
 
 
 
