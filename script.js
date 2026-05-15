@@ -130,3 +130,54 @@ cta.addEventListener('mouseenter', () => {
 cta.addEventListener('mouseleave', () => {
   cta.style.transform = 'translateX(0)';
 });
+const movingLine = document.querySelector(".moving-line");
+
+movingLine.addEventListener("mousemove", (e) => {
+
+  const card = movingLine.querySelector(".hover-card");
+  const rect = movingLine.getBoundingClientRect();
+
+  let x = e.clientX - rect.left - 95;
+
+  if(x < 0) x = 0;
+  if(x > rect.width - 190) x = rect.width - 190;
+
+  card.style.left = `${x}px`;
+});
+
+// OPTIONAL EXTRA SMOOTH HOVER EFFECT
+
+const cards = document.querySelectorAll(".card-image-wrap");
+
+cards.forEach((card) => {
+
+  card.addEventListener("mousemove", (e) => {
+
+    const rect = card.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -4;
+    const rotateY = ((x - centerX) / centerX) * 4;
+
+    card.style.transform = `
+      perspective(1000px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+    `;
+  });
+
+  card.addEventListener("mouseleave", () => {
+
+    card.style.transform = `
+      perspective(1000px)
+      rotateX(0deg)
+      rotateY(0deg)
+    `;
+  });
+
+});
