@@ -154,7 +154,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
  
 .navbar__submit:hover { border-color: #999; }
  
-/* ===== SOTD BAR ===== */
 .sotd-bar {
   display: flex;
   align-items: center;
@@ -178,7 +177,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .sotd-label { color: #555; }
 .sotd-score { color: #555; }
  
-/* ===== MODAL OVERLAY ===== */
 .modal-overlay {
   display: none;
   position: fixed;
@@ -189,7 +187,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
  
 .modal-overlay.is-open { display: block; }
  
-/* ===== EXPLORE / SEARCH MODAL ===== */
 .explore-modal,
 .search-modal {
   background: #f0f0f0;
@@ -308,7 +305,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 400;
 }
  
-/* ===== AUTH MODALS ===== */
 .auth-modal {
   position: absolute;
   top: 50%;
@@ -349,7 +345,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   line-height: 1;
 }
  
-/* Emoji face */
 .emoji-face {
   width: 80px;
   height: 80px;
@@ -571,7 +566,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 8px;
 }
  
-/* ===== CLOSE BUTTON ===== */
 .modal-close {
   position: absolute;
   top: 14px;
