@@ -145,39 +145,38 @@ movingLine.addEventListener("mousemove", (e) => {
   card.style.left = `${x}px`;
 });
 
-// OPTIONAL EXTRA SMOOTH HOVER EFFECT
+const openButtons = {
+  exploreBtn: "exploreOverlay",
+  searchBtn: "searchOverlay",
+  loginBtn: "loginOverlay",
+  signupBtn: "signupOverlay"
+};
 
-const cards = document.querySelectorAll(".card-image-wrap");
+// OPEN MODALS
+Object.keys(openButtons).forEach(id => {
+  const btn = document.getElementById(id);
+  const modalId = openButtons[id];
 
-cards.forEach((card) => {
+  if (btn) {
+    btn.addEventListener("click", () => {
+      document.getElementById(modalId).classList.add("active");
+    });
+  }
+});
 
-  card.addEventListener("mousemove", (e) => {
-
-    const rect = card.getBoundingClientRect();
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-
-    const rotateX = ((y - centerY) / centerY) * -4;
-    const rotateY = ((x - centerX) / centerX) * 4;
-
-    card.style.transform = `
-      perspective(1000px)
-      rotateX(${rotateX}deg)
-      rotateY(${rotateY}deg)
-    `;
+// CLOSE MODALS
+document.querySelectorAll("[data-close]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const id = btn.getAttribute("data-close");
+    document.getElementById(id).classList.remove("active");
   });
+});
 
-  card.addEventListener("mouseleave", () => {
-
-    card.style.transform = `
-      perspective(1000px)
-      rotateX(0deg)
-      rotateY(0deg)
-    `;
+// CLOSE ON BACKDROP CLICK
+document.querySelectorAll(".modal-overlay").forEach(overlay => {
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove("active");
+    }
   });
-
 });
