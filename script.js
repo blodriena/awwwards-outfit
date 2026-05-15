@@ -120,3 +120,13 @@ cards.forEach((card) => {
   });
 
 });
+
+const cta = document.querySelector('.cta-link');
+
+cta.addEventListener('mouseenter', () => {
+  cta.style.transform = 'translateX(5px)';
+});
+
+cta.addEventListener('mouseleave', () => {
+  cta.style.transform = 'translateX(0)';
+});

@@ -1,0 +1,191 @@
+/* SMALLER + CLEANER VERSION */
+
+.promo-section{
+  width:100%;
+  padding:40px;
+  background:#ececec;
+}
+
+.promo-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+/* CARD */
+
+.promo-card{
+  position:relative;
+
+  height:560px;
+
+  border-radius:18px;
+  overflow:hidden;
+
+  background:#111;
+}
+
+.promo-card img{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+/* DARK OVERLAY */
+
+.promo-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to right,
+    rgba(0,0,0,.72),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.72)
+  );
+}
+
+/* CONTENT */
+
+.promo-content{
+  position:relative;
+  z-index:2;
+
+  padding:52px 42px;
+}
+
+.promo-label{
+  display:block;
+
+  margin-bottom:20px;
+
+  font-size:16px;
+  color:white;
+}
+
+.promo-content h2{
+  font-size:54px;
+  line-height:.98;
+  font-weight:600;
+  letter-spacing:-2px;
+
+  color:white;
+}
+
+/* BUTTON */
+
+.promo-btn{
+  position:relative;
+
+  margin-top:34px;
+
+  width:160px;
+  height: 58px;
+
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:14px;
+
+  background:transparent;
+  color:white;
+
+  cursor:pointer;
+
+  overflow:hidden;
+}
+
+/* BUTTON MOVEMENT */
+
+.promo-btn span{
+  position:relative;
+  z-index:2;
+
+  font-size:24px;
+  font-weight:500;
+}
+
+.btn-fill{
+  position:absolute;
+  top:0;
+  left:-100%;
+
+  width:100%;
+  height:100%;
+
+  background:white;
+}
+
+.promo-btn:hover .btn-fill{
+  left:0;
+}
+
+.promo-btn:hover span{
+  color:#111;
+}
+
+/* FAQ */
+
+.promo-faq{
+  position:absolute;
+  right:42px;
+  bottom:34px;
+  z-index:4;
+
+  font-size:16px;
+  color:white;
+
+  text-decoration:none;
+}
+
+.promo-faq span{
+  text-decoration:underline;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+  .promo-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .promo-section{
+    padding:20px;
+  }
+
+  .promo-card{
+    height:430px;
+  }
+
+  .promo-content{
+    padding:34px 26px;
+  }
+
+  .promo-content h2{
+    font-size:38px;
+  }
+
+  .promo-btn{
+    width:145px;
+    height:54px;
+  }
+
+  .promo-btn span{
+    font-size:19px;
+  }
+
+  .promo-faq{
+    left:26px;
+    right:auto;
+    bottom:24px;
+
+    font-size:14px;
+  }
+}
